@@ -5,8 +5,8 @@ iniciobucle:while(true){
         resultado += resultado * factorial;
         factorial--;
     }else{
-        break iniciobucle
+        break iniciobucle;
     }
 }
 
-console.log(resultado)
+console.log(resultado);
