@@ -32,6 +32,7 @@ function App() {
       }
       <Carrito
       carrito={carrito}
+      agregarAlCarrito={addProducto}
       />
       < Flooter />
     </div>
