@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled from '@emotion/styled';
-import { obtenerDiferenciaYear } from '../helper';
+import PropTypes from 'prop-types';
+import { obtenerDiferenciaYear, calcularMarca, calcularPlan } from '../helper';
 const Campo = styled.div`
 display: flex;
 margin-bottom: 1rem;
@@ -50,7 +51,7 @@ text-align: center;
 margin-bottom: 2rem;
 `
 
-const Formulario = () => {
+const Formulario = ({guardarResumen, guardarCargando}) => {
 
     const [datos, guardarDatos] = useState({
         marca: '',
@@ -91,7 +92,26 @@ const Formulario = () => {
 
         resultado -= ((diferencia * 3) * resultado) / 100;
 
-        console.log(resultado)
+        //Americano 15%
+        //Asiatico 5%
+        //Europeo 30%
+        resultado = calcularMarca(marca) * resultado;
+
+
+        const incrementoPlan = calcularPlan(plan);
+        resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
+        //muestra el spiner de cargando
+        guardarCargando(true);
+
+        //tarda 3 segundos en mostrar el resultado y eliminar el spiner de cargando
+        setTimeout(() => {
+            guardarCargando(false);
+
+            guardarResumen({
+                cotizacion: Number(resultado),
+                datos
+            });
+        }, 3000)
     }
     
     return (
@@ -109,7 +129,7 @@ const Formulario = () => {
                 onChange={obtenerInformacion}
                 >
                     <option value=''>-- Selecciona --</option>
-                    <option value='erupeo'>Europeo</option>
+                    <option value='europeo'>Europeo</option>
                     <option value='americano'>Americano</option>
                     <option value='asiatico'>Asiatico</option>
                 </Select>
@@ -159,6 +179,11 @@ const Formulario = () => {
             <Boton type='submit'>Cotizar</Boton>
         </form>
     );
+}
+
+Formulario.propTypes = {
+    guardarResumen: PropTypes.func.isRequired,
+    guardarCargando: PropTypes.func.isRequired,
 }
 
 export default Formulario;
