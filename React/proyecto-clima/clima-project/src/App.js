@@ -35,6 +35,7 @@ function App() {
       }
     }
     consultarApi();
+    // eslint-disable-next-line
   }, [consultar]);
 
   let componente;
@@ -61,7 +62,7 @@ function App() {
                 guardarConsulta={guardarConsulta}
               />
             </div>
-            <div className='col-md-6 col-sm-12'>
+            <div className='col-md-6 col-sm-12 mt-3 mt-md-0'>
               {componente}
             </div>
           </div>
