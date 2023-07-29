@@ -1,0 +1,111 @@
+.banner {
+  position: relative !important;
+}
+
+.cardRecentSearches {
+  cursor: pointer !important;
+}
+
+.titleRecentSearches {
+  font-size: 31px !important;
+  color: #000000 !important;
+  font-family: "Roboto-Bold" !important;
+}
+
+.btnClearRecentSearches {
+  font-family: "Roboto-Medium" !important;
+  font-size: 13px !important;
+  color: #FF0000 !important;  
+}
+
+.subTitleRecentSearches {
+  font-family: "Roboto-Medium" !important;
+  color: #000000 !important;
+  font-size: 15px !important;
+}
+
+.imageRecentSearches {
+  height: 160px !important;
+  object-fit: cover !important;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+}
+
+.destinationRecentSearches {
+  font-family: "Roboto-Bold" !important;
+  color: #3f3f3f !important;
+  font-size: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+.summaryRecentSearches {
+  font-family: "Roboto-Medium" !important;
+  color: #6f6f6f !important;
+  font-size: 18px !important;
+}
+
+.itemRecentSearches {
+  width: 10px;
+  height: 10px;
+  background-color: #6f6f6f;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.rowRecentSearches {
+  gap: 0;
+  overflow: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  flex-wrap: initial;
+  display: inline-flex;
+  margin: auto;
+}
+
+.rowRecentSearches > * {
+  scroll-snap-align: center;
+  padding: 0;
+}
+
+.rowRecentSearches::-webkit-scrollbar {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  height: 5px;
+  padding: 0 50px;
+  cursor: pointer;
+}
+
+.rowRecentSearches::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.rowRecentSearches::-webkit-scrollbar-thumb {
+  background-color: #b8b4b4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+  .titleRecentSearches {
+    font-size: 22px !important;
+  }
+
+  .subTitleRecentSearches {
+    font-family: "Roboto-Regular" !important;
+    color: #3F3F3F !important;
+    font-size: 14px !important;
+  }
+
+  .destinationRecentSearches {
+    font-size: 18px !important;
+  }
+
+  .summaryRecentSearches {
+    font-size: 15px !important;
+  }
+}

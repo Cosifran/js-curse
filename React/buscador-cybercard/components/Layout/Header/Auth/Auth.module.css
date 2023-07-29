@@ -1,0 +1,13 @@
+.buttonSessionStart {
+    color: #3F3F3F !important;
+    text-transform: none !important;
+    font-size: 20px !important;
+    font-family: 'Roboto-Medium' !important;
+    word-spacing: 0% !important;
+}
+
+@media screen and (max-width: 768px) {
+    .buttonSessionStart {
+        font-size: 18px !important;
+    }
+}

@@ -1,0 +1,33 @@
+.buttonBasePlusOrLess {
+  min-width: 30px !important;
+  height: 30px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+}
+
+.buttonBasePlusOrLess:focus {
+  background: none !important;
+}
+
+.buttonBasePlusOrLess:hover {
+  border: none !important;
+}
+
+.buttonLess,
+.buttonLess:hover,
+.buttonLess:focus {
+  background-color: rgba(222, 225, 230, .4) !important;
+  color: #b8b4b4 !important;
+  font-weight: bold !important;
+  font-size: 21px !important;
+}
+
+.buttonPlus,
+.buttonPlus:hover,
+.buttonPlus:focus {
+  background-color: rgba(255, 68, 31, 0.203) !important;
+  color: #ff441f !important;
+  font-weight: bold;
+  font-size: 16px;
+}

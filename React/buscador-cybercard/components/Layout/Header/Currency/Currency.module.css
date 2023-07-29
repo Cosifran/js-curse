@@ -1,0 +1,10 @@
+.listItemText > span {
+    color: #ff0000 !important;
+    text-transform: none !important;
+    font-size: 20px !important;
+    font-family: 'Roboto-Medium' !important;
+    display: flex !important;
+    width: auto !important;
+    cursor: pointer !important;
+    margin-top: 4px !important;
+}

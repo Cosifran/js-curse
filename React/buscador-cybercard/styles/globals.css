@@ -1,0 +1,444 @@
+@font-face {
+  font-family: "Roboto-Light";
+  font-weight: 300;
+  src: local("Roboto-Light"), url("/fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+  src: local("Roboto-Regular"),
+    url("/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  src: local("Roboto-Medium"),
+    url("/fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  src: local("Roboto-Bold"), url("/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  font-weight: 900;
+  src: local("Roboto-Black"), url("/fonts/Roboto-Black.ttf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto-Regular", sans-serif;
+  background-color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.textGrey {
+  color: #787878;
+}
+
+.MuiOutlinedInput-notchedOutline,
+.MuiOutlinedInput-notchedOutline:hover fieldset {
+  border: 2px solid #c2c2c2 !important;
+  border-radius: 12px !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border: 3px solid #c2c2c2 !important;
+}
+
+.css-llrb4p-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root::before,
+.css-llrb4p-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root::after,
+.css-llrb4p-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root:hover:not(
+    .Mui-disabled,
+    .Mui-error
+  ):before {
+  border-bottom: none;
+}
+
+.css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input:focus {
+  background: none;
+}
+
+label.Mui-focused {
+  color: #c2c2c2 !important;
+}
+
+.MuiOutlinedInput-input {
+  color: #3f3f3f;
+  font-weight: bold !important;
+}
+
+.MuiIconButton-root:hover {
+  background: none !important;
+}
+
+.Mui-checked,
+.css-9n9dig-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #ff0000 !important;
+}
+
+.MuiPaginationItem-root {
+  border: none !important;
+  background-color: white !important;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.Mui-selected {
+  background-color: #ff0000 !important;
+  color: white !important;
+  text-transform: none !important;
+}
+
+.MuiFab-root,
+.MuiFab-root:hover {
+  background-color: #ff0000 !important;
+}
+
+.nav {
+  gap: 0;
+  overflow: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  flex-wrap: inherit;
+}
+
+.nav > * {
+  scroll-snap-align: center;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  background-color: #e7e7e7 !important;
+  color: #3f3f3f !important;
+  border-top-right-radius: 15px !important;
+  border-top-left-radius: 15px !important;
+}
+
+.nav-link.active {
+  background-color: #ff0000 !important;
+  color: white !important;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+#services .MuiSvgIcon-root {
+  margin-right: 10px !important;
+}
+
+.amenitieRoom {
+  font-family: "Roboto-Medium";
+  font-size: 0.9rem;
+  color: #6f6f6f;
+}
+
+.amenitieRoomDialog {
+  font-family: "Roboto-Medium";
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #6f6f6f;
+}
+
+.amenitieRoom svg {
+  font-size: 1rem;
+  color: #ff0000;
+}
+
+.amenitieRoomDialog svg {
+  font-size: 1.8rem;
+  color: #ff0000;
+}
+
+.bg-red {
+  background-color: #ff0000 !important;
+}
+
+.red-color,
+.iconInfoPoint svg {
+  color: #ff0000 !important;
+}
+
+.purple-color {
+  color: #9E005D !important;
+}
+
+.bg-red-ligth {
+  background-color: #f7e7e9 !important;
+}
+
+.border-color-grey {
+  border-color: #3f3f3f !important;
+}
+
+.iconInfoPoint {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.7rem;
+}
+
+.MuiPaper-rounded {
+  border-radius: 20px !important;
+}
+
+#formAddGuest .MuiDialog-paper {
+  background-color: #f9f9f9 !important;
+  padding: 8px;
+}
+
+#formAddGuest .MuiInputBase-input {
+  padding: 12.5px 12px !important;
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+}
+
+#formAddGuest .MuiOutlinedInput-input {
+  font-weight: initial !important;
+}
+
+#formAddGuest .MuiDialogContent-root::-webkit-scrollbar {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 4px;
+}
+
+#formAddGuest .MuiDialogContent-root::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+#formAddGuest .MuiDialogContent-root::-webkit-scrollbar-thumb {
+  background-color: #b8b4b4;
+  border-radius: 5px;
+}
+
+#formAddGuest .MuiOutlinedInput-root {
+  background-color: white;
+}
+
+#formAddGuest
+  .MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd.MuiAutocomplete-input.MuiAutocomplete-inputFocused {
+  padding: 4px !important;
+}
+
+.textLabel {
+  font-size: 16px !important;
+  color: #3f3f3f !important;
+}
+
+.text-grey {
+  color: #6f6f6f;
+}
+
+#summaryPreBookMovile {
+  border-top-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+}
+
+#dialogSuammaryPreBook .MuiPaper-rounded {
+  border-radius: 0 !important;
+  background-color: #f5f5f5;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+
+.imageCardHotelList {
+  max-height: 244px !important;
+  object-fit: cover !important;
+  border-top-left-radius: 14px !important;
+  border-bottom-left-radius: 14px !important;
+}
+
+.cardContent {
+  border-radius: 16px !important;
+}
+
+.borderStart {
+  --bs-border-width: 2px;
+  border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+#listItemCurrency .Mui-selected {
+  background-color: #f7e7e9 !important;
+}
+
+#listItemCurrency span,
+#listItemCurrency p {
+  color: #3f3f3f;
+}
+
+#listItemCurrency p {
+  color: #3f3f3f;
+  font-family: "Roboto-Bold";
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    background-color: transparent !important;
+  }
+
+  .nav-link.active {
+    background-color: transparent !important;
+    border-bottom: 2px solid #ff0000 !important;
+    color: #ff0000 !important;
+    border-radius: 0;
+  }
+
+  .costSummaryMovil > .row {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+    position: relative;
+    padding: 0;
+  }
+
+  .imageCardHotelList {
+    height: 200px !important;
+    object-fit: cover !important;
+    border-top-right-radius: 16px !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .borderStart {
+    border-left: none;
+  }
+
+  .btnShowRoom {
+    font-size: 20px !important;
+  }
+
+  .MuiFormLabel-root {
+    font-size: 1.01rem !important;
+    color: #787878 !important;
+    font-weight: 600 !important;
+  }
+
+  .rdrDateDisplayWrapper {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  .rdrMonth {
+    width: 100% !important;
+  }
+
+  .rdrMonthsVertical {
+    overflow-y: auto !important;
+  }
+
+  .filteredHotel .imageCardHotelList {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  .filteredHotelTitle { 
+    text-align: center;
+  }
+
+}
+
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+  top: 2px;
+  bottom: 2px;
+}
+
+.rdrCalendarWrapper {
+  font-size: 16px !important;
+}
+
+.rdrDayNumber span {
+  color: #332927;
+}
+
+.rdrDateDisplayWrapper {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.rdrDateDisplayItem {
+  border-radius: 13px !important;
+}
+
+.rdrDateDisplayItemActive {
+  border: 2px solid #ff0000 !important;
+}
+
+.rdrInRange {
+  color: #f7e7e9 !important;
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span {
+  color: #ff0000 !important;
+}
+
+.z-4 {
+  z-index: 4 !important;
+}
+
+.z-5 {
+  z-index: 5 !important;
+}
+
+.filteredHotel {
+  border: 3px #ff0000 solid !important;
+}
+
+.filteredHotel .imageCardHotelList {
+  border-top-left-radius: 0 !important;
+}
+
+.filteredHotelTitle {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  font-weight: bold;
+  font-size: large;
+}

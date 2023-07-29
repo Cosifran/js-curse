@@ -1,0 +1,12 @@
+.dialog {
+  max-height: 480px !important;
+}
+
+.dialogContend {
+  max-width: 410px !important;
+  animation-duration: 2s !important;
+}
+
+.dialogContend::-webkit-scrollbar {
+  display: none !important;
+}

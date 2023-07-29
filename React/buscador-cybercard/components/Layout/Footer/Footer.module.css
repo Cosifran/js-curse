@@ -1,0 +1,26 @@
+.footerMain {
+  background-color: #eeeeee !important;
+}
+
+.title {
+  font-family: "Roboto-Bold" !important;
+  font-size: 47px !important;
+  color: #000000 !important;
+  text-align: center;
+}
+
+.text {
+  font-size: 18px !important;
+  color: #000000 !important;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .title {    
+    font-size: 30px !important;    
+  }
+
+  .text {
+    font-size: 16px !important;    
+  }
+}

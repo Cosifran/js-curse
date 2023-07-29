@@ -1,0 +1,9 @@
+.appBar {
+  background-color: #fff !important;
+  z-index: 4 !important;
+  position: relative !important;
+}
+
+.logo {
+  position: relative !important;
+}

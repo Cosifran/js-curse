@@ -1,0 +1,25 @@
+.buttonAddRoom {
+  color: #ff0000 !important;
+  text-transform: none !important;
+  margin-bottom: 0.8em !important;
+}
+
+.buttonAddRoom:hover {
+  background: none !important;
+}
+
+.buttonAddRoom:focus {
+  background: none !important;
+}
+
+.buttonApply {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #ff0000 !important;
+  text-transform: none !important;
+  border-radius: 13px !important;
+}
+
+.buttonApply:hover {
+  background-color: #ff0000 !important;
+}
