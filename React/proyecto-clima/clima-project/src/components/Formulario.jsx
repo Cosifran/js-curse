@@ -31,7 +31,7 @@ const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta }) => {
         <form
             onSubmit={handleSubmit}
         >
-            {error? <Error mensaje='Ambos campos son obligatorios'/> : null}
+            {error? <Error mensaje='El campo es obligatorio'/> : null}
             <div className='col-12'>
                 <div className="mb-3">
                     <label htmlFor="ciudad"
