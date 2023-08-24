@@ -6,45 +6,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #BFBFBF;
+  background-color: #bfbfbf;
 }
 
-
-
 label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 22px;
 }
 
 legend {
   position: relative;
-  z-index: 0; 
+  z-index: 0;
   display: inline-block;
   width: auto;
   margin: 0;
   margin-bottom: 40px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 legend::before {
   position: absolute;
-  content: '';
-  width: calc(120% );
+  content: "";
+  width: calc(120%);
   display: block;
-  background-color:#EB6864;
+  background-color: #eb6864;
   height: 40px;
-  z-index:-1;
+  z-index: -1;
   left: -30px;
   right: -30px;
   transform: rotate(-1deg);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
-legend:hover::before{
+legend:hover::before {
   transform: rotate(2deg);
 }
 
-form.card{
+form.card {
   border: none;
 }
 
@@ -58,9 +56,9 @@ form.card{
 }
 h2 {
   margin-bottom: 2rem;
-  font-family: 'Work Sans', sans-serif;
-  border-bottom: 3px solid #EB6864;
-  padding-bottom:10px;
+  font-family: "Work Sans", sans-serif;
+  border-bottom: 3px solid #eb6864;
+  padding-bottom: 10px;
 }
 .card-body i {
   font-size: 3rem;
@@ -75,4 +73,23 @@ h2 {
 }
 .fa-lastfm {
   color: #d51007;
+}
+
+.MuiInputBase-input-MuiOutlinedInput-input {
+  background-color: black;
+}
+.MuiOutlinedInput-notchedOutline,
+.MuiOutlinedInput-notchedOutline:hover fieldset {
+  border: 1px solid #9a9999 !important;
+  border-radius: 12px !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border: 2px solid #9a9999 !important;
+  cursor: text;
+}
+
+.MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  border: 1px solid #9a9999 !important;
+  border-radius: 12px !important;
 }
