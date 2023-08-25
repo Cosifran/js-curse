@@ -1,16 +1,27 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 //import mui components
 import Select from "@mui/material/Select"
 import Button from "@mui/material/Button"
 import MenuItem from "@mui/material/MenuItem"
 import TextField from "@mui/material/TextField"
 import FormControl from "@mui/material/FormControl"
+//import contex component
+import {CategoriasContex} from "../contex/CategoriaContex"
+import {RecetasContex} from "../contex/RecetasContex"
 
 export default function Formulario() {
-  const [age, setAge] = useState(0)
+  const {categorias} = useContext(CategoriasContex)
+  const {searchRecipe, setConsult} = useContext(RecetasContex)
+  const [search, setSearch] = useState({
+    name: "",
+    category: "",
+  })
 
-  const handleChange = (event) => {
-    setAge(event.target.value)
+  const handleChange = (e) => {
+    setSearch({
+      ...search,
+      [e.target.name]: e.target.value,
+    })
   }
 
   return (
@@ -19,34 +30,50 @@ export default function Formulario() {
         Busca bebidas por categorias o ingrediente
       </h1>
 
-      <FormControl fullWidth>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          searchRecipe(search)
+          setConsult(true)
+        }}
+      >
         <div className="row mt-5">
-          <div className="col-4">
+          <div className="col-12 col-md-4">
             <TextField
+              name="name"
               className="w-100"
               id="outlined-basic"
               placeholder="Buscar por ingrediente"
               variant="outlined"
               style={{background: "white", borderRadius: "12px"}}
+              value={search.name}
+              onChange={handleChange}
             />
           </div>
-          <div className="col-4">
+          <div className="col-12 col-md-4">
             <Select
+              name="category"
               style={{background: "white", borderRadius: "12px"}}
               className="w-100"
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={search.category}
               onChange={handleChange}
             >
               <MenuItem value={0}>Selecciona categoria</MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              {categorias.map((categoria) => (
+                <MenuItem
+                  key={categoria.strCategory}
+                  value={categoria.strCategory}
+                >
+                  {categoria.strCategory}
+                </MenuItem>
+              ))}
             </Select>
           </div>
-          <div className="col-4">
+          <div className="col col-md-4">
             <Button
+              type="submit"
               sx={{
                 background: "#eb6864",
                 paddingY: "14px",
@@ -61,7 +88,7 @@ export default function Formulario() {
             </Button>
           </div>
         </div>
-      </FormControl>
+      </form>
     </>
   )
 }
