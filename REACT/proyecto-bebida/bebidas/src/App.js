@@ -3,6 +3,7 @@ import React from "react"
 //Import own components
 import Header from "./components/Header"
 import Formulario from "./components/Formulario"
+import ModalProvider from "./contex/ModalContex"
 import ListaReceta from "./components/ListaRecta"
 import RecetasProvider from "./contex/RecetasContex"
 import CategoriaProvider from "./contex/CategoriaContex"
@@ -11,14 +12,16 @@ function App() {
   return (
     <CategoriaProvider>
       <RecetasProvider>
-        <Header />
+        <ModalProvider>
+          <Header />
 
-        <div className="container mt-5">
-          <div className="row">
-          <Formulario />
+          <div className="container mt-5">
+            <div className="row">
+              <Formulario />
+            </div>
+            <ListaReceta />
           </div>
-          <ListaReceta />
-        </div>
+        </ModalProvider>
       </RecetasProvider>
     </CategoriaProvider>
   )

@@ -4,7 +4,6 @@ import Select from "@mui/material/Select"
 import Button from "@mui/material/Button"
 import MenuItem from "@mui/material/MenuItem"
 import TextField from "@mui/material/TextField"
-import FormControl from "@mui/material/FormControl"
 //import contex component
 import {CategoriasContex} from "../contex/CategoriaContex"
 import {RecetasContex} from "../contex/RecetasContex"
@@ -14,7 +13,7 @@ export default function Formulario() {
   const {searchRecipe, setConsult} = useContext(RecetasContex)
   const [search, setSearch] = useState({
     name: "",
-    category: "",
+    category: 0,
   })
 
   const handleChange = (e) => {

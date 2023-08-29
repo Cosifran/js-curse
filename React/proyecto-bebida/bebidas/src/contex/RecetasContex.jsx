@@ -20,7 +20,7 @@ const RecetasProvider = (props) => {
         setRecipe(results.data.drinks)
       }
       getRecipe()
-    }
+    } // eslint-disable-next-line
   }, [search])
   return (
     <RecetasContex.Provider value={{recipe, searchRecipe, setConsult}}>

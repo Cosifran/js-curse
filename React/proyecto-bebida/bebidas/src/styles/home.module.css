@@ -1,3 +1,4 @@
-.imgsize{
-    
+.imgsize {
+  height: 250px !important;
+  object-fit: cover !important;
 }
